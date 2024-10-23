@@ -2,9 +2,6 @@ version: '3'
 services:
   push-receiver:
     image: vpapidokha/mockoon:latest
-    volumes:
-      - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
-      - "./prometheus/rules.yml:/etc/prometheus/rules.yml"
     networks:
       - mockoon
     ports:
