@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: vpaidokha/mockoon:latest
+          tags: vpapidokha/mockoon:latest
