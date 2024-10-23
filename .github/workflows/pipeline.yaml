@@ -52,6 +52,6 @@ jobs:
       - name: Deploy to server
         run: |
           ssh -i $HOME/.ssh/id_ed25519 root@${{ secrets.DEPLOY_HOST }} << 'EOF'
-          docker-compose -f mockoon-private/docker-compose.yaml pull
-          docker-compose -f mockoon-private/docker-compose.yaml up -d
+          docker compose -f mockoon-private/docker-compose.yaml pull
+          docker compose -f mockoon-private/docker-compose.yaml up -d
           EOF
