@@ -47,7 +47,7 @@ jobs:
 
       - name: Deploy to server or Storage Box
         run: |
-          rsync -azP -e "ssh -i $HOME/.ssh/id_ed25519 -p 22" ./docker-compose.yaml root@${{ secrets.ARTIFACT_HOST }}:~/mockoon-private/docker-compose.yaml
+          rsync -azP -e "ssh -i $HOME/.ssh/id_ed25519 -p 22" ./docker-compose.yaml root@${{ secrets.DEPLOY_HOST }}:~/mockoon-private/docker-compose.yaml
 
       - name: Deploy to server
         run: |
