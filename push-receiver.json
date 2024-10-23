@@ -1,7 +1,7 @@
 {
     "uuid": "3fa9d04d-c67f-443b-8fb8-14a7b67e63a1",
     "lastMigration": 32,
-    "name": "Tu proxy notifier",
+    "name": "push-receiver",
     "endpointPrefix": "",
     "latency": 0,
     "port": 3001,

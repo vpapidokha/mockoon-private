@@ -1,0 +1,23 @@
+version: '3'
+services:
+  push-receiver:
+    image: vpapidokha/mockoon:latest
+    volumes:
+      - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "./prometheus/rules.yml:/etc/prometheus/rules.yml"
+    networks:
+      - mockoon
+    ports:
+      - 3001:3001
+  dozzle:
+    image: amir20/dozzle:latest
+    networks:
+      - mockoon
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  mockoon:
+    driver: bridge
