@@ -14,7 +14,7 @@ USER mockoon
 
 EXPOSE 3001
 
-ENTRYPOINT ["mockoon-cli","start","--disable-log-to-file","--port","3001","--data"]
+ENTRYPOINT ["mockoon-cli","start","--disable-log-to-file","--log-transaction","--port","3001","--data"]
 CMD ["push-receiver.json"]
 
 # Usage: docker run -p <host_port>:<container_port> vpapidokha/mockoon
